@@ -35,7 +35,7 @@
             <field name="search_view_id" ref="base.view_groups_search"/>
         </record>
 
-        <!-- Add group field in user search view -->
+        <!-- Add groups_id field in user search view -->
 
         <record model="ir.ui.view" id="view_users_search">
             <field name="name">res.users.search (settings_improvement)</field>
@@ -43,7 +43,7 @@
             <field name="inherit_id" ref="base.view_users_search"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="groups_id" widget="many2one" string="Group"/>
+                    <field name="groups_id" widget="many2one" string="Belongs to"/>
                 </xpath>
             </field>
         </record>
